@@ -23,6 +23,7 @@ file = open("yeet.txt")
 
 for line in file:
     print(line)
+
 file.close()
 # for loop gebruiken om lijnen in de txt file uit te lezen.
 
@@ -35,9 +36,21 @@ file.close()
 #     print("bestand is al gesloten!")
 # cool, t werkt.
 
-write_test = open("yeet2.txt", "r")
+# write_test = open("yeet2.txt", "r")
 # write_test.write("ayy lmaooo")
 # write_test.close()
 
-for line in write_test:
-    print(line)
+# for line in write_test:
+#    print(line)
+
+# copy pasta uit project OP1:
+
+with open("score.txt", "a") as write_test: #maakt file aan in huidige map, "a" geeft aan dat het een file moet creëren en daarna mag aanpassen
+    write_test.write("hello world") #schrijft naar bestand die hierboven is aangemaakt
+
+with open("yeet2.txt", "r") as read_test: 
+    for line in read_test:
+        print(line)
+
+#with handelt alles af iirc, dus sluit de file ook als het klaar is er mee.
+#maakt ook alles wat hierboven staat eigenlijk ook overbodig, je kan namelijk t zelfde doen met minder code.
