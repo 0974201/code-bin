@@ -1,4 +1,4 @@
-//context; dit had ik een paar jaar geleden voor een klasgenoot geschreven om te helpen met de basics van javascript.
+//context; dit had ik een paar jaar geleden voor een klasgenoot geschreven als extra uitleg over de basics van javascript.
 
 //note: ik gebruikt JS hier, geen ES!
 //gebruik repl.it/languages/javascript om dit te runnen als je Visual Studio Code nog niet hebt geïnstalleerd~
