@@ -5,7 +5,7 @@ cnx = sqlite3.connect('python/test.db')
 cursor = cnx.cursor() #dit ding praat basically met de db
 
 #maak table in test db
-#cursor.execute("create table games (release_year integer, release_name text)")
+cursor.execute("create table games (release_year integer, release_name text)")
 
 db_test_list = [ #what a thrill
     (2001, "Metal Gear Solid 2: Sons of Liberty"),
@@ -19,8 +19,8 @@ db_test_list = [ #what a thrill
 ]
 
 #voer list aan db
-#cursor.executemany("INSERT INTO games VALUES (?, ?)", db_test_list) #de  vraagtekens hier maken het wat veiliger om dingen in de db te bewaren (denk aan sql injections)
-#cnx.commit() #dit is belangrijk anders stopt ie het niet in db
+cursor.executemany("INSERT INTO games VALUES (?, ?)", db_test_list) #de  vraagtekens hier maken het wat veiliger om dingen in de db te bewaren (denk aan sql injections)
+cnx.commit() #dit is belangrijk anders stopt ie het niet in db
 
 #voeg iets toe aan db
 new_entry = [(2001, "Phoenix Wright"), (2015, "The Great Ace Attorney: Adventures"), (2022, "Pokémon Scarlet")]
